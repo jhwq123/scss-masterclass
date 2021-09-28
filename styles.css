@@ -1,16 +1,24 @@
-body {
+.father {
   display: flex;
-  height: 800px;
-  /* Main Axis */
-  flex-direction: column;
+  height: 500px;
   justify-content: space-around;
-  /* Cross Axis */
-  align-items: center;
+  align-content: space-between;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-  background: blue;
+.children {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100px;
+  width: 100px;
+  height: 100px;
+  background: rgb(0, 0, 255);
   color: white;
+  font-size: 50px;
+  border: 1px solid rgba(0, 0, 0, 255);
+}
+
+.children:nth-child(2) {
+  background-color: black;
+  flex-grow: 1;
 }
