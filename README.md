@@ -23,12 +23,13 @@
 - [x] grid-row-gap
 - [x] grid-gap
 - [x] grid-template-areas
-- [ ] grid-column-start
-- [ ] grid-column-end
-- [ ] grid-row-start
-- [ ] grid-row-end
-- [ ] grid-column
-- [ ] grid-row
-- [ ] grid-template
-- [ ] justify-self
-- [ ] align-self
+- [x] grid-column-start
+- [x] grid-column-end
+- [x] grid-row-start
+- [x] grid-row-end
+- [x] grid-column
+- [x] grid-row
+- [x] grid-template
+- [x] justify-self
+- [x] align-self
+- [x] place-items
