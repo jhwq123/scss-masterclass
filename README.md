@@ -50,3 +50,16 @@
 - [x] auto-fill
 - [x] min-content
 - [x] max-content
+
+## SCSS:
+
+- [ ] Variables
+- [ ] Nesting
+- [ ] Partials
+- [ ] Mixins
+- [ ] Extend
+- [ ] Responsive Mixins
+
+## To Clone:
+
+- [ ]
