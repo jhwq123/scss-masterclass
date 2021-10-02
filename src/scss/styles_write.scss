@@ -1,0 +1,57 @@
+@import "_varialbes";
+@import "_mixins";
+@import "_buttons";
+
+body {
+  background: $bg;
+  a {
+    color: red;
+    font-size: $title;
+  }
+}
+
+.box {
+  margin-top: 10px;
+  &:hover {
+    background-color: green;
+  }
+  h2 {
+    color: blue;
+    &:hover {
+      color: red;
+    }
+  }
+  button {
+    color: red;
+  }
+}
+
+h1 {
+  @include sexyTitle();
+}
+
+a {
+  @include link();
+  &:nth-child(odd) {
+    @include link("odd");
+  }
+  &:nth-child(even) {
+    @include link("even");
+  }
+}
+
+a {
+  @extend %button;
+  text-decoration: none;
+}
+
+button {
+  @extend %button;
+  border: none;
+}
+
+a {
+  @include responsive {
+    text-decoration: none;
+  }
+}
