@@ -1,14 +1,96 @@
 @import "_mixins";
+@import "_variables";
 
-h1 {
-  color: red;
-  @include responsive("iphone") {
-    color: yellow;
+body {
+  background-color: black;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.title-box {
+  background-color: $bg1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+
+  .title {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $bg2;
   }
-  @include responsive("iphohe-l") {
-    font-size: 60px;
+
+  .sub-title1 {
+    background-color: blue;
   }
-  @include responsive("tablet") {
-    color: green;
+
+  .sub-title2 {
+    background-color: green;
+  }
+
+  .menu {
+    background-color: white;
+  }
+
+  .discription {
+    background-color: purple;
+  }
+}
+
+.content-box {
+  background-color: $bg2;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+
+  .order {
+    background-color: red;
+  }
+
+  .content {
+    background-color: white;
+
+    .title {
+      background-color: red;
+    }
+
+    .direct {
+      background-color: blue;
+    }
+
+    .video {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+    }
+
+    .discription {
+      background-color: green;
+    }
+
+    .rating {
+      background-color: purple;
+    }
+
+    .comment {
+      background-color: orange;
+    }
   }
 }

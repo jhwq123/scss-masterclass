@@ -28,7 +28,7 @@ const styles = () =>
     .pipe(gulp.dest(routes.css.dest));
 
 const watch = () => {
-  gulp.watch(routes.css.watch, styles);
+  gulp.watch(routes.css.watch, { usePolling: true }, styles);
 };
 
 const clean = () => del(["dist/"]);
