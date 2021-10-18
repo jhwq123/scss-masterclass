@@ -2,16 +2,13 @@
 
 ## title (4step)
 
-1. Large_row
-2. Small_row
-3. Large_column
-4. Small_column
+1. Small_column, Large_column [480px, 600px]
+2. Small_row, Large_row [820px, 1190px]
+
 
 ## image Box (3step)
 
-1. Large
-2. Middle
-3. Small
+1. relative palette
 
 # Concept - grid
 
@@ -36,3 +33,4 @@
   6. comment - flex
 
 * sample 5
+

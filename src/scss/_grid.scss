@@ -1,0 +1,11 @@
+%grid-column {
+    grid-template-columns: 1fr;
+}
+
+%grid-row-small {
+    grid-template-columns: 420px 1fr;
+}
+
+%grid-row-large {
+    grid-template-columns: 520px 1fr;
+}

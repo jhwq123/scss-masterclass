@@ -1,40 +1,39 @@
-@mixin sexyTitle {
-  color: blue;
-  font-size: 30px;
-  margin-bottom: 12px;
-}
+@import "_title.scss";
+@import "_grid.scss";
 
-@mixin link($word) {
-  text-decoration: none;
-  display: block;
-  @if $word == "odd" {
-    color: blue;
-  } @else {
-    color: red;
-  }
-}
+$minPhone: 480px;
+$maxPhone: 600px;
+$minTablet: 820px;
+$maxTablet: 1190px;
 
-$minIphone: 500px;
-$maxIphone: 690px;
-$minTablet: $minIphone + 1;
-$maxTablet: 1120px;
-
-@mixin responsive($device) {
-  @if $device == "iphone" {
-    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) {
-      @content;
+@mixin response($value) {
+  @if $value == "title" {
+    @media screen and (max-width: $maxPhone) {
+      height: 250px;
+      font-size: 50px;
     }
-  } @else if $device == "tablet" {
+    @media screen and (min-width: $maxPhone) and (max-width: $minTablet) {
+      height: 370px;
+      font-size: 70px;
+    }
     @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
-      @content;
+      height: 250px;
+      font-size: 50px;
     }
-  } @else if $device == "iphone-l" {
-    @media screen and (max-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
-      @content;
+    @media screen and (min-width: $maxTablet) {
+      height: 370px;
+      font-size: 70px;
     }
-  } @else if $device == "ipad-l" {
-    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
-      @content;
+  } @else if $value == "grid" {
+    @media screen and (max-width: $minTablet) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      grid-template-columns: 420px 1fr;
+    }
+    @media screen and (min-width: $maxTablet) {
+      grid-template-columns: 520px 1fr;
     }
   }
+  
 }
