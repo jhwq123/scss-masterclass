@@ -26,14 +26,28 @@ $maxTablet: 1190px;
     }
   } @else if $value == "grid" {
     @media screen and (max-width: $minTablet) {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(min-content, 1fr);
     }
     @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
-      grid-template-columns: 420px 1fr;
+      grid-template-columns: 400px minmax(min-content, 1fr);
+      position: relative;
     }
     @media screen and (min-width: $maxTablet) {
-      grid-template-columns: 520px 1fr;
+      grid-template-columns: 550px minmax(min-content, 1fr);
+      position: relative;
+    }
+  } @else if $value == "title-box" {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      position: sticky;
+      height: 100vh;
+      top: 0px;
+      left: 0px;
+    }
+    @media screen and (min-width: $maxTablet) {
+      position: sticky;
+      height: 100vh;
+      top: 0px;
+      left: 0px;
     }
   }
-  
 }
