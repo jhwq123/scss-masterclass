@@ -1,0 +1,42 @@
+
+<div class="content"> <!-- content 5 -->
+                <div class="title">
+                    <span class="name">name</span>
+                </div>
+                <span class="direct">Directed</span>
+                <div class="video">
+                    <div>Videos here.</div>
+                    <div class="number">
+                        <div class="tab1"></div>
+                        <div class="tab2">
+                            <span>1.</span>
+                        </div>
+                    </div>
+                    <div class="vote">
+                        <div>
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div>
+                            <span>1</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="discription">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>C</span>
+                    <span>D</span>
+                    <span>E</span>
+                </div>
+                <div class="rating">
+                    <span>ㅡ B</span>
+                    <span>My rating: #/10</span>
+                </div>
+                <div class="comment">
+                    <span>No Comments</span>
+                    <span><i class="fas fa-comment"></i>Leave a Comments</span>
+                </div>
+            </div>

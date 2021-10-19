@@ -1,0 +1,53 @@
+@import "_title.scss";
+@import "_grid.scss";
+
+$minPhone: 480px;
+$maxPhone: 600px;
+$minTablet: 820px;
+$maxTablet: 1190px;
+
+@mixin response($value) {
+  @if $value == "title" {
+    @media screen and (max-width: $maxPhone) {
+      height: 250px;
+      font-size: 50px;
+    }
+    @media screen and (min-width: $maxPhone) and (max-width: $minTablet) {
+      height: 370px;
+      font-size: 70px;
+    }
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      height: 250px;
+      font-size: 50px;
+    }
+    @media screen and (min-width: $maxTablet) {
+      height: 370px;
+      font-size: 70px;
+    }
+  } @else if $value == "grid" {
+    @media screen and (max-width: $minTablet) {
+      grid-template-columns: minmax(min-content, 1fr);
+    }
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      grid-template-columns: 400px minmax(min-content, 1fr);
+      position: relative;
+    }
+    @media screen and (min-width: $maxTablet) {
+      grid-template-columns: 550px minmax(min-content, 1fr);
+      position: relative;
+    }
+  } @else if $value == "title-box" {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      position: sticky;
+      height: 100vh;
+      top: 0px;
+      left: 0px;
+    }
+    @media screen and (min-width: $maxTablet) {
+      position: sticky;
+      height: 100vh;
+      top: 0px;
+      left: 0px;
+    }
+  }
+}
