@@ -1,5 +1,7 @@
 @import "_mixins";
 @import "_variables";
+@import url("https://fonts.googleapis.com/css2?family=Fruktur&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
 
 body {
   background-color: $bg;
@@ -136,7 +138,7 @@ main {
       color: $content1-title;
       font-size: 25px;
       font-weight: 450;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, Serif;
       margin-bottom: 5px;
     }
     .sub1 {
@@ -144,7 +146,7 @@ main {
       font-size: 15px;
       font-weight: 450;
       font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+        "Lucida Sans", Arial, sans-serif;
       text-transform: uppercase;
       margin-bottom: 40px;
     }
@@ -158,7 +160,7 @@ main {
       font-size: 14px;
       font-weight: 450;
       font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+        "Lucida Sans", Arial, sans-serif;
       text-transform: uppercase;
       border: 2px solid $btn1-text;
       margin: 20px;
@@ -176,7 +178,7 @@ main {
       font-size: 14px;
       font-weight: 450;
       font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+        "Lucida Sans", Arial, sans-serif;
       text-transform: uppercase;
       margin: 20px;
       margin-top: 60px;
@@ -207,32 +209,38 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30px 0px;
+  margin: 50px 0px;
 
   .sub1 {
-    color: $btn1-text;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
     font-weight: 450;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
   .title1 {
-    color: black;
-    font-size: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 36px;
     font-weight: 450;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    .title2 {
+      font-style: italic;
+      font-family: "Zen Antique", serif;
+    }
   }
 }
 
 .planets-box {
   width: 100%;
+  height: 40%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 200px;
   .planet-box {
-    background-color: blue;
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -244,38 +252,227 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-bottom: 70px;
   }
   .sub2 {
-    color: black;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 13px;
+    font-weight: 450;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, Serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
   }
   .title3 {
-    color: black;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    font-weight: 450;
+    font-style: italic;
+    font-family: "Fruktur", cursive;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
   }
-  .pay1 {
-    color: black;
+  .pay {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    font-weight: 550;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, Serif;
+  }
+  .btn1 {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $btn1-text;
+    font-size: 14px;
+    font-weight: 450;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    border: 2px solid $btn1-text;
+    margin: 20px 0px;
+  }
+}
+
+.choices-box {
+  width: 40%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 2fr;
+  justify-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  .choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    span {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  }
+  .line {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 1px;
+  }
+  .btn1 {
+    grid-column: 1 / 6;
+    grid-row: 2 / 3;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $btn1-text;
+    font-size: 14px;
+    font-weight: 450;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    border: 2px solid $btn1-text;
+    margin: 20px;
+    margin-top: 50px;
   }
 }
 
 .images-grid1 {
   width: 100%;
-  height: 600px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  margin-bottom: 60px;
   img {
     width: 100%;
     height: 100%;
   }
-  margin-bottom: 600px;
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Zen Antique", serif;
+    padding: 130px 0px;
+    .date {
+      font-size: 14px;
+    }
+    .title1 {
+      font-size: 30px;
+    }
+    .sub1 {
+      font-size: 13px;
+      text-transform: uppercase;
+      i {
+        margin-left: 10px;
+      }
+    }
+  }
 }
 
+.email-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 80px;
+  input {
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 70px;
+    font-size: 23px;
+    font-family: "Zen Antique", serif;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .btn3 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
 
+.images-grid2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 50px 0px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.specify {
+  font-size: 33px;
+  font-weight: 400;
+  font-family: "Zen Antique", serif;
+  margin: 50px 0px;
+  margin-bottom: 100px;
+  span {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  a {
+    color: #55e6c1;
+  }
+}
 
 footer {
-  background-color: white;
-}
-
-img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  background-color: #3b3b98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 130px 0px;
+  .links-box {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    div {
+      width: 220px;
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      span {
+        color: rgba(255, 255, 255, 0.8);
+        margin: 5px 0px;
+      }
+      span:first-child {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 30px;
+      }
+    }
+    .line {
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 1px;
+      height: 130px;
+    }
+  }
 }
